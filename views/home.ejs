@@ -1,0 +1,31 @@
+<%- include("./partials/header"); -%>
+<!-- Another Method of truncating -->
+<!-- <style media="screen">
+  .log-post{
+    width: 55%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+</style> -->
+<style media="screen">
+  .btn{
+    margin-top:40px;
+  }
+</style>
+<h1>Home</h1>
+<p> <%= homeContent %> </p>
+
+<% diaryLogs.forEach((diaryLog)=>{ %>
+<div class="post">
+  <h1> <%= diaryLog.title  %> </h1>
+  <p class="log-post"> <%= diaryLog.post.substring(0,100)+"... "  %> <a href= "post/<%=  diaryLog.title  %>" > Read More</a></p>
+</div>
+
+<% }); %>
+
+<a href="/compose">
+  <button class="btn btn-lg btn-success">Compose</button>
+</a>
+<%-  include("./partials/footer"); -%>

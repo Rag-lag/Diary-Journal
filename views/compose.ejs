@@ -1,0 +1,15 @@
+<%- include("./partials/header"); -%>
+<h1>Compose</h1>
+<form class="" action="/compose" method="post">
+  <label for="text" style="font-style:bold">Title</label>
+  <br>
+  <textarea id="text" style="resize:none; width:100%" name="diaryLogTitle" rows="1" cols="100"></textarea>
+  <br />
+  <label for="text" style="font-style:bold">Post</label>
+  <br>
+  <textarea id="text" style=" width:100%" name="diaryLogPost" rows="6" cols="100"></textarea>
+  <br />
+  <!-- <input name="" value="" autocomplete="off"> -->
+  <button class="btn btn-primary" type="submit" name="button">Publish</button>
+</form>
+<%-  include("./partials/footer"); -%>
